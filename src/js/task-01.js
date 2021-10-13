@@ -1,18 +1,13 @@
-//==============JS HW - 6================================
-//==============------1------=============================
-const searchCategories = document.querySelectorAll('.item');
-const numberOfCategories = searchCategories.length;
-let messageNumberOfCategories = `Number of categories: ` + numberOfCategories;
-console.log(messageNumberOfCategories);
+'use strict';
 
-function Category(a, b) { 
-const nameOfCategoriesAll = document.querySelectorAll("li.item");
-const nameOfCategories = document.querySelectorAll("h2");
-let positionOfFirstCategorie = nameOfCategories[0];
-let nameOfFirstCategorie = positionOfFirstCategorie.textContent;
-let massageCategory = "Category: " + nameOfFirstCategorie;
-
-
-//console.log(nameOfCategories);
-//console.log(positionOfFirstCategorie);
-console.log(massageCategory);}
+const totalCategories = document.querySelectorAll('.item');
+console.log(
+    `Number of categories: ${totalCategories.length}`);
+  
+const categoriesTitle = [...totalCategories].map(
+    categories =>
+      `Category: ${categories.children[0].textContent}, 
+    Elements: ${categories.children[1].children.length}`,
+  )
+  .join('\n');
+console.log(categoriesTitle);
