@@ -5,7 +5,7 @@ const validation = () => {
   if (inputValid.value.length === totalInput) {
     inputValid.classList.remove("invalid");
     inputValid.classList.add("valid");
-    console.log(inputValid.value.length, ": Nice 6 symbol");
+    console.log(inputValid.value.length, ": Good job 6 symbol");
   } else if (inputValid.value.length === 0) {
     inputValid.classList.remove("valid");
     inputValid.classList.remove("invalid");
