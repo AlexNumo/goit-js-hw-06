@@ -13,12 +13,11 @@ const images = [
   },
 ];
 
-const galleryNewProporties = ({ url, alt }) =>
+const galleryItem = ({ url, alt }) =>
   `<li>
   <img src ="${url}" alt="${alt}" width =200 height =150>
   </li>`;
-const galleryNew = images.reduce((acc, item) => acc + galleryNewProporties(item), "");
+const galleryNew = images.reduce((acc, galleryNewAtribute) => acc + galleryItem(galleryNewAtribute), "");
 
 const galleryList = document.querySelector(".gallery");
-galleryList.insertAdjacentHTML("afterbegin", galleryNew);
-galleryList.setAttribute("style", "display: flex; list-style: none");
+const galleryNewAtribute = galleryList.insertAdjacentHTML("afterbegin", galleryNew) + galleryList.setAttribute("style", "display: flex; list-style: none");
