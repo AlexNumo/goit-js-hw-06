@@ -25,5 +25,5 @@ ingredients.forEach((ingredient) => {
   liItems.classList.add("item");
   liItems.textContent = ingredient;
   ingredientsNewElement.push(liItems);
-  ingredientsNew.append(...ingredientsNewElement);
 });
+ingredientsNew.append(...ingredientsNewElement);
